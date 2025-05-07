@@ -193,5 +193,20 @@ class Teacher{
       students[count]=b.getrollno();
       count++;
    }
+   void removestudent(Student& b, int id){
+      int temp;
+      for (int i=0;i<500;i++){
+      if (students[i]==id){
+         temp=i;
+         students[i]=0;
+         count--;
+      }
+      }
+      for(int i=temp;i<500;i++){
+         if(i!=500){
+         students[i]=students[i+1];
+      }
+      else students[0];
+   }
    void setname(string n){name=n;};
 };
